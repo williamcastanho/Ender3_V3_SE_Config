@@ -9,3 +9,5 @@ Para funcionar a calibração automática do Z-offset você precisará usar um f
 Video demonstrando, resumidamente (+-menos), a instalação: https://www.youtube.com/watch?v=AZGesW8qMRY
 
 As configurações vieram com base no perfil da creality que achei, e nas configs do https://github.com/0xD34D e https://github.com/bootuz-dinamon.
+
+PARA EVITAR PROBLEMAS, COMECE UMA INSTALAÇÃO LIMPA CASO JÁ TENHA TENTANDO INSTALAR OU USAVA OCTOPRINT ANTES. ASSIM, VAI EVITAR TER DOR DE CABEÇA.

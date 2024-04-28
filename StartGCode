@@ -1,5 +1,6 @@
 #Contém um startgcode para utilizar em conjunto com o plugin adaptative mesh
 #Eu demonstei +- como utilizar no seguinte vídeo: https://youtu.be/RateDZqvpPw
+#Substitua no seu slicer - talvez você precise fazer adaptações
 
 G90 ; Use coordenadas absolutas.
 M83 ; Extrusora em modo relativo

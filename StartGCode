@@ -1,0 +1,24 @@
+#Contém um startgcode para utilizar em conjunto com o plugin adaptative mesh
+#Eu demonstei +- como utilizar no seguinte vídeo: https://youtu.be/RateDZqvpPw
+
+G90 ; Use coordenadas absolutas.
+M83 ; Extrusora em modo relativo
+M117 ; É para evitar problemas com o plugin, não mexa.
+
+M104 S150 ; seta uma temperatura mais baixa para evitar que o noozle fique escorrendo enquanto dá home, e faz o bed mesh
+M140 S{first_layer_bed_temperature[0]} ; seta a temperatura final da bed
+M190 S{first_layer_bed_temperature[0]} ; espera a temperatura da bed estabilizar.
+
+M220 S100 ;Reseta o Feedrate
+M221 S100 ;Reseta o Flowrate
+
+G28 ;Home
+BED_MESH_CALIBRATE ADAPTATIVE=1 ;Auto Level
+
+M104 S{first_layer_temperature[0]} ; seta a temperatura final do nozzle
+
+SMART_PARK ; Vai estacionar perto do objeto a ser impresso
+
+M109 S{first_layer_temperature[0]} ; espera a temperatura do nozzle estabilizar.
+
+LINE_PURGE ; Adaptative purge/limpeza do bico adaptativa
